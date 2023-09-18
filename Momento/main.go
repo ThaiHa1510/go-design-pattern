@@ -17,13 +17,13 @@ func NewDistance() *Distance {
 	return &Distance{value: 100}
 }
 
-func (distance *Distance) RestoreValue(DistanceMomento *DistanceMomento) {
-	distanceSaved := DistanceMomento.GetDistance()
+func (distance *Distance) RestoreValue(distanceMomento *DistanceMomento) {
+	distanceSaved := distanceMomento.GetDistance()
 	distance.value = distanceSaved.GetValue()
 }
 
-func (distance *Distance) BackupValue(DistanceMomento *DistanceMomento) {
-	DistanceMomento.SetValue(*distance)
+func (distance *Distance) BackupValue(distanceMomento *DistanceMomento) {
+	distanceMomento.SetValue(*distance)
 }
 
 func (distance *Distance) GetValue() int {

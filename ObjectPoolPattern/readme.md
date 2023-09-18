@@ -1,0 +1,1 @@
+Object Pool Pattern là một mẫu thiết kế trong lập trình hướng đối tượng, được sử dụng để quản lý và tái sử dụng các đối tượng có thể tạo ra một cách tốn kém về tài nguyên. Mục tiêu chính của mẫu thiết kế này là giảm thiểu việc tạo và hủy các đối tượng thường xuyên, giúp cải thiện hiệu suất và sử dụng tài nguyên hiệu quả.
