@@ -5,6 +5,13 @@ import (
 	"reflect"
 )
 
+//
+// Function to find the first and last occurrences of an element in a sorted array
+// Step:
+//	1. Find the biggest element in the array
+//  2. Find the next biggest element (reduce the array)
+// ...
+
 func bubbleSort(arr []int) {
 	n := len(arr)
 	for i := 0; i < n-1; i++ {
@@ -30,6 +37,17 @@ func findFirstAndLast(arr []int, val int) (int, int) {
 	return last, first
 }
 
+// firstFunc is a recursive function that finds the first occurrence of a target element in a sorted array.
+//
+// Parameters:
+// - arr: the sorted array to search in.
+// - low: the starting index of the search range.
+// - hight: the ending index of the search range.
+// - x: the target element to search for.
+// - n: the length of the array.
+//
+// Returns:
+// - The index of the first occurrence of the target element in the array, or -1 if the element is not found.
 func firstFunc(arr []int, low, hight, x, n int) int {
 	if low > hight {
 		return -1
@@ -45,6 +63,17 @@ func firstFunc(arr []int, low, hight, x, n int) int {
 	}
 }
 
+// lastFunc is a recursive function that finds the last occurrence of a target element in a sorted array.
+//
+// Parameters:
+// - arr: the sorted array to search in.
+// - low: the starting index of the search range.
+// - hight: the ending index of the search range.
+// - x: the target element to search for.
+// - n: the length of the array.
+//
+// Returns:
+// - The index of the last occurrence of the target element in the array, or -1 if the element is not found.
 func lastFunc(arr []int, low, hight, x, n int) int {
 	if low > hight {
 		return -1
@@ -68,7 +97,7 @@ func main() {
 	first2 := firstFunc(arr, 0, len(arr)-1, x, len(arr))
 	fmt.Println("Using first:", first2)
 	last2 := lastFunc(arr, 0, len(arr)-1, x, len(arr))
-	fmt.Println("Using first:", last2)
+	fmt.Println("Using last:", last2)
 	// Mảng số nguyên cần sắp xếp
 	numbers := []int{64, 34, 25, 12, 22, 11, 90}
 

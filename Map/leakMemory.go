@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Init
-	n := 1_000_000
+	n := 10_000_000
 	m := make(map[int][128]byte)
 	printAlloc()
 
