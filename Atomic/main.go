@@ -14,7 +14,6 @@ func main() {
 		go func(n *int32) {
 			defer wg.Done()
 			atomic.AddInt32(n, 1)
-			atomic.
 		}(&n)
 	}
 	wg.Wait()

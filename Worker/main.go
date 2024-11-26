@@ -14,6 +14,8 @@ func main() {
 	}
 }
 
+// worker will range over the given channel and send each value to the result channel.
+// Useful for running a goroutine that needs to process a stream of values from a channel.
 func worker(i int, job <-chan int, result chan<- int) {
 	for j := range job {
 		result <- j

@@ -134,7 +134,7 @@ type Subscriber struct {
 func NewEvent(name string) *EventEmiter {
 	return &emmiter{
 		MaxListeners: DefaultMaxListeners,
-		evtListeners:  Event{}  
+		evtListeners:  Event{}
 	}
 }
 
